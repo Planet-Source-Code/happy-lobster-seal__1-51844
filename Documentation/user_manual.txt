@@ -1,0 +1,128 @@
+Introduction
+
+The SEAL software package is an easy to use assembly language simulator that allows the editting and execution of basic assembly programs.  Interesting features that the system provides are colour syntaxing of code and the animation of code.
+This document is intended as a guide to using the software.  See the instruction guide for explanations on assembly commands supported and how they work.
+
+Main Window
+
+Quick Links
+
+All the windows that the system can display are shown at the top of the main screen underneath the icons called the quick links toolbar.  If there are many windows in the system and some are obscured or closed, clicking on the appropriate link with show the window and place it on top of the others.  The windows can also be accessed through the view menu.
+
+When the program initially loads, the Code and Program Output links are disabled because there is no code in the editor and no program has been run to view the output.  When a program is loaded the code link becomes enabled and during execution the Program Output link is enabled.
+
+Code Editor (Shortcut F5)
+
+This is where programs are created and editted.  When a line of code is typed in, and enter pressed, it is colour coded and any error messages are displayed.  Any text pasted into the window is also coloured.  Right cliking in the text box will display a popup menu giving standard text editing facilities,find/replace and explanation of any code on that line.
+
+Console (Shortcut F6)
+
+This is where instructions can be typed into the system and executed directly.  It acts rather like a command line interface and returns any error messages as commands are run there are then.  Transfer control commands like JUMP and JUSBR are invalid and will not run.
+
+Program Output (Shortcut F7)
+
+This is where program execution occurs, any keyboard input or screen output operations occur here.  Once the program is finished, the window is disabled.
+
+Location Table Window (Shortcut F8)
+
+This shows the values of the variables and registers in memory as the program executes.  Commands ran from the console window also cause this screen to be updated.
+
+Code In Memory (Shortcut F11)
+
+When a program is run this window simply lists the code in memory and highlights the currently executing line.  A small arrow arrow also indicates the current line.
+
+Computer Architecture (Shortcut F12)
+
+This consists of a diagram representing the virtual machine's architecture.  The components in the architecture are connected to each other via separate control and  data lines.  Each component has a black data and a green data line connected to it.  The representation is a simplified version of what can be found in many (old) textbooks and is only intended as a rough guide.
+
+When animation occurs, the fetch decode execute (FDE) sequence is animated with the control unit requesting the next instruction from memory, and the result returning to be executed.
+
+The Arithmetic and Logic Unit (ALU) contains three read only text boxes for the flag, accumulator and index registers (these are automatically updated during run time).  There is also two list boxes associated to the memory component; one lists the program in memory and the other user declared variables.  Whenever memory is accessed during an instruction, the line of code or variables accessed from memory is highlighted.
+
+A miniature version of the Program Output window resides in the animation window and is used to emulate the screen.  Underneath it is a textbox representing the keyboard and accepts numeric user input.  Any input is displayed in the Program Output window and in the miniature screen.
+
+Normally, you would use the Program Output window to interact with a program but this can also be done in the Computer Architecture's screen and window.
+
+Animation Settings
+
+There are three animation settings available and a separate speed setting.
+
+Full Animation
+
+Animate control and data through the appropriate control and data lines between components.  The information flow is represented by moving text from one component to another.
+
+Stepped Animation
+
+Shows the information path but animation is done in increments.
+
+No Animation
+
+When stepped and full animation are used the source component, destination component and information travel paths are highlighted.  illustrating the information path in this way allows the anticipation of information flow.
+
+Animation Speed Setting
+
+The slider allows the adjustment of animation speed.
+
+Running a Program
+
+From the Program menu, choose Run or click the play icon in the toolbar.
+
+Running a Program One Instruction at a Time
+
+From the Program menu, choose Step Through or click the pause/play icon the toolbar.
+Repeat as neccessary
+
+Testing a Program
+
+From the Program menu, choose Test or click the tick icon in the toolbar.
+
+Stopping Execution
+
+From the Program menu, choose Stop or click the stop icon in the toolbar.
+
+Running a Program in Full Screen
+
+From the Program menu, choose Run Full Screen.
+Run program as you would normally.
+
+Explaining Lines
+
+Sometimes you may want a given instruction explained to you as you are not sure what it does.  This is easy in SEAL.
+Select the line you would like explained to you
+From the Edit menu, choose Explain line or right click on the line select Explain Line
+
+Inserting Standard Routines
+
+To save you time and effort SEAL has a number of built in standard code snippets that can be inserted anywhere.  Most programmers should be familiar with these routines, e.g. IF... THEN... ELSE...  To insert one, simply place the text cursor where you want the code to appear right click and choose Insert, then select the appropriate routine.
+
+Viewing a Program's Statistics
+
+From the Program menu, choose Code Statistics.
+
+
+Any code in the editor is analysed and a graph and table are displayed showing the number of instructions in broad categories.  They arE:
+
+Control (jumping from one part of a program to another)
+Internal data transfer (copying data from reigster to memory or vice versa)
+External data transfer (input/output)
+Arithmetic (mathematical instructions)
+
+Printing a Program
+
+From the File menu, choose Print of click the print icon in the toolbar.
+
+This allows the printing of any one of the system's windows.  There is individual control of each window so you can print all the text within a window or simply it's selected text.  You can also change printer options by clicking Setup.
+
+Options Window
+
+Thiw window displays the currently used settings for the simulator.  From this window you can:
+
+Change syntax colours
+Set system font/font size
+Set full screen mode size
+Enable/disable colour syntaxing
+Enable/disable syntax error message dialogs in the code editor
+
+Copying Text in a Window
+
+If you wish to copy text from any of the system's windows, highlight the text right click and select Copy or alternatively press Control and C.

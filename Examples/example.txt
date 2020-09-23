@@ -1,0 +1,13 @@
+;my program 
+myvariable: datai -12
+myarray: blocki 12
+
+startlabel: load acc,#-233 ;some comment
+load indx,#+12
+load acc,myvariable ;some comment
+load acc,myarray(2)
+load acc,rnd(23)
+oupti scr,myvariable
+oupts scr,'MURRRRRRRDAHH'
+endlabel: jump finishlabel
+finishlabel:

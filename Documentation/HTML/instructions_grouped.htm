@@ -1,0 +1,196 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Arithmetic</title>
+</head>
+
+<body>
+
+<p><font face="Verdana" size="2"><b>Arithmetic</b></font></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20%"><font face="Verdana" size="2">Add</font></td>
+    <td width="20%"><font face="Verdana" size="2">Clrz</font></td>
+    <td width="20%"><font face="Verdana" size="2">Cmpr</font></td>
+    <td width="20%"><font face="Verdana" size="2">Dec</font></td>
+    <td width="20%"><font face="Verdana" size="2">Dvd</font></td>
+  </tr>
+  <tr>
+    <td width="20%"><font face="Verdana" size="2">Inc</font></td>
+    <td width="20%"><font face="Verdana" size="2">Mod</font></td>
+    <td width="20%"><font face="Verdana" size="2">Mpy</font></td>
+    <td width="20%"><font face="Verdana" size="2">Neg</font></td>
+    <td width="20%"><font face="Verdana" size="2">Sub</font></td>
+  </tr>
+</table>
+<p><font face="Verdana" size="2"><b>Internal Data Transfer</b></font></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20%"><font face="Verdana" size="2">Copy</font></td>
+    <td width="20%"><font face="Verdana" size="2">Load</font></td>
+    <td width="20%"><font face="Verdana" size="2">&nbsp;</font></td>
+    <td width="20%"><font face="Verdana" size="2">&nbsp;</font></td>
+    <td width="20%"><font face="Verdana" size="2">&nbsp;</font></td>
+  </tr>
+</table>
+<p><font face="Verdana" size="2"><b>External Data Transfer</b></font></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20%"><font face="Verdana" size="2">Clrs</font></td>
+    <td width="20%"><font face="Verdana" size="2">Inpti</font></td>
+    <td width="20%"><font face="Verdana" size="2">Ouptc</font></td>
+    <td width="20%"><font face="Verdana" size="2">Oupti</font></td>
+    <td width="20%"><font face="Verdana" size="2">Oupts</font></td>
+  </tr>
+</table>
+<p><font face="Verdana" size="2"><b>Branching</b></font></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" height="39">
+  <tr>
+    <td width="20%" height="21"><font face="Verdana" size="2">Exit</font></td>
+    <td width="20%" height="21"><font face="Verdana" size="2">Halt</font></td>
+    <td width="20%" height="21"><font face="Verdana" size="2">Jeqz</font></td>
+    <td width="20%" height="21"><font face="Verdana" size="2">Jgez</font></td>
+    <td width="20%" height="21"><font face="Verdana" size="2">Jgtz</font></td>
+  </tr>
+  <tr>
+    <td width="20%" height="18"><font face="Verdana" size="2">Jlez</font></td>
+    <td width="20%" height="18"><font face="Verdana" size="2">Jltz</font></td>
+    <td width="20%" height="18"><font face="Verdana" size="2">Jnez</font></td>
+    <td width="20%" height="18"><font face="Verdana" size="2">Jsubr</font></td>
+    <td width="20%" height="18"><font face="Verdana" size="2">Jump</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<hr>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2"><b>Add</b> &lt;register&gt;,
+&lt;address&gt;</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">Add contents of address into
+register.&nbsp; Set Flag register according to result.</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Clrs</b> &lt;address&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Clear the screen with the colour value of the contents of
+address.</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Valid&nbsp;colour values are 0-15<br>
+Address is optional.</font></p>
+<span style="FONT-FAMILY:
+ Arial; mso-bidi-font-family: 'Times New Roman'">
+<hr>
+</span>
+<p class="SealCode"><font face="Verdana" size="2"><b>Clrz</b> &lt;register&gt;</font></p>
+<p class="SealCode"><span style="mso-bidi-font-family: Times New Roman"><font face="Verdana" size="2">Zeroise
+contents of register.</font></span></p>
+<p class="SealCode"><span style="mso-bidi-font-family: Times New Roman"><font face="Verdana" size="2">&lt;register&gt;
+= acc | indx | flag</font></span></p>
+<span style="FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'">
+<hr>
+</span>
+<p class="SealCode"><font face="Verdana" size="2"><b>Cmpr</b> &lt;register&gt;, &lt;address&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Compare contents of address with register.&nbsp; Set Flag
+register according to result.</font></p>
+<p class="SealCode"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Copy</b> &lt;register&gt;, &lt;address&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Copy contents of register into address.</font></p>
+<p class="SealCode"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2"><b>Dec</b> &lt;register&gt;</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">Decrement register.&nbsp; Set Flag
+register according to result.</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2"><b>Dvd</b> &lt;register&gt;,
+&lt;address&gt;</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">Divide contents of register with
+address.&nbsp; Set Flag register according to result.</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Exit</b></font></p>
+<p class="SealCode"><font face="Verdana" size="2">Return control from subroutine.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Halt</b></font></p>
+<p class="SealCode"><font face="Verdana" size="2">Terminate program execution.</font></p>
+<hr>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2"><b>Inc</b> &lt;register&gt;</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">Increment register.&nbsp; Set Flag
+register according to result.</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Inpti</b> &lt;device&gt;, &lt;address&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Input integer from device to address.</font></p>
+<p class="SealCode"><font face="Verdana" size="2">&lt;device&gt; = kbd</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Jeqz</b> &lt;label&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Jump to label if register is zero.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Jgez</b> &lt;label&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Jump to label if register is greater than or equal to
+zero.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Jgtz</b> &lt;label&gt;</font> </p>
+<p class="SealCode"><font face="Verdana" size="2">Jump to label if register is greater than zero.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Jlez</b> &lt;label&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Jump to label if register is less than or equal to zero.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Jltz</b> &lt;label&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Jump to label if register is less than zero.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Jnez</b> &lt;label&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Jump to label if register is not zero.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Jsubr</b> &lt;label&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Jump to label subroutine call.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Jump</b> &lt;label&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Jump to label.</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Load</b> &lt;register&gt;, &lt;address&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Load contents of address into register.&nbsp;&nbsp; Set Flag
+register according to contents loaded.</font></p>
+<p class="SealCode"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2"><b>Mod</b> &lt;register&gt;,
+&lt;address&gt;</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">Calculate the modulus of
+register with address.&nbsp; Set Flag register according to result.</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2"><b>Mpy</b> &lt;register&gt;,
+&lt;address&gt;</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">Multiply contents of address
+with register.&nbsp; Set Flag register according to result.</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2"><b>Neg</b> &lt;register&gt;</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">Negate register.&nbsp;&nbsp; Set Flag
+register according to result.</font></p>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Ouptc</b> &lt;device&gt;, &lt;address&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Set the ouput text colour.&nbsp; Set Flag register according
+to result.</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Valid&nbsp;colour values are 0-15<br>
+&lt;device&gt; = scr</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Oupti</b> &lt;device&gt;, &lt;address&gt;</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Output integer from address to device.</font></p>
+<p class="SealCode"><font face="Verdana" size="2">&lt;device&gt; = scr</font></p>
+<hr>
+<p class="SealCode"><font face="Verdana" size="2"><b>Oupts</b> &lt;device&gt;, ' &lt;string&gt; '</font></p>
+<p class="SealCode"><font face="Verdana" size="2">Output string to device.</font></p>
+<p class="SealCode"><font face="Verdana" size="2">&lt;string&gt; = a sequence of characters</font></p>
+<hr>
+<p class="SealCode" style="TEXT-ALIGN: justify"><font face="Verdana" size="2"><b>Sub</b> &lt;register&gt;,
+&lt;address&gt;</font></p>
+<p><font face="Verdana" size="2">Subtract contents of address from register.&nbsp; Set Flag register according
+to result.</font></p>
+
+<p><font face="Verdana" size="2">&lt;register&gt; = acc | indx</font></p>
+
+</body>
+
+</html>

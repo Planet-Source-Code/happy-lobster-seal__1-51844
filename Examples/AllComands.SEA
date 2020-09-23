@@ -1,0 +1,53 @@
+;==== global variable/array declaration
+myarray: 	blocki 10 	;array with 10 elements
+myvariable:	datai 10	;integer declaration with initial value of 10
+
+;==== no decimal and string support
+;==== no No Operation Command (NOP)
+
+;==== arithmetic & logic
+inc acc	;increment acc
+dec acc	;decrement acc
+neg acc	;negate
+mpy acc,#1	;multiply
+dvd acc,#2	;devide
+add acc,#3	;add
+sub acc,#4	;subtract
+cmpr acc,#5 ;comparison
+
+;==== data transfer
+load acc,#10		;put 10 into acc
+load acc,myarray(1)	;put value of myarray(1) into acc
+load acc,myvariable	;puts value of myvariable into acc
+load acc,rnd(20)		;put random number from 1 to 20
+copy acc,myvariable	;put value of acc into myvariable
+clrz acc			;clear register
+clrz flag			;clears flag register
+
+;==== I/O data transfer
+clrs #1			;clear screen with colour 1
+ouptc scr,#1		;output colour
+oupti scr,#1		;output an integer
+oupts scr,'A string'	;output a string
+inpti kbd,myvariable	;input an integer from the keyboard
+
+;==== control/jumps
+jump mylabel ;jump to
+jlez mylabel ;jump <=0
+jltz mylabel ;jump <0
+jeqz mylabel ;jump =0
+jgez mylabel ;jump >=0
+jgtz mylabel ;jump >0
+jnez mylabel ;jump <>0
+jsubr sublabel;jump to subroutine
+
+mylabel:
+halt	;stops program
+
+
+;==== subroutine example, supports nested subs
+sublabel:
+;do commands
+;    ::
+;do commands
+exit	;exits subroutine
