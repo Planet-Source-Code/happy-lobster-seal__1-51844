@@ -1,0 +1,2 @@
+myvar: datai 23
+add acc,myvar

@@ -1,0 +1,98 @@
+dice: datai 0
+userinput: datai 0
+
+start:
+
+clrs #1
+ouptc scr,#15
+oupts scr,'oooooooooooooooooooooooooooooo'
+oupts scr,'o   Random  Dice  Generator  o'
+oupts scr,'o                            o'
+oupts scr,'o  Input a negative to quit  o'
+oupts scr,'oooooooooooooooooooooooooooooo'
+oupts scr,''
+
+
+load acc,rnd(5)
+copy acc,dice
+cmpr acc,#0
+jeqz one
+load acc,dice
+cmpr acc,#1
+jeqz two
+load acc,dice
+cmpr acc,#2
+jeqz three
+load acc,dice
+cmpr acc,#3
+jeqz four
+load acc,dice
+cmpr acc,#4
+jeqz five
+load acc,dice
+cmpr acc,#5
+jeqz six
+one:
+oupts scr,'   _______'
+oupts scr,'  |       |'
+oupts scr,'  |       |'
+oupts scr,'  |   X   |'
+oupts scr,'  |       |'
+oupts scr,'  |_______|'
+oupts scr,''
+oupts scr,'You rolled a 1'
+jump done
+two:
+oupts scr,'   _______'
+oupts scr,'  |       |'
+oupts scr,'  |   X   |'
+oupts scr,'  |       |'
+oupts scr,'  |   X   |'
+oupts scr,'  |_______|'
+oupts scr,''
+oupts scr,'You rolled a 2'
+jump done
+three:
+oupts scr,'   _______'
+oupts scr,'  |       |'
+oupts scr,'  |   X   |'
+oupts scr,'  |   X   |'
+oupts scr,'  |   X   |'
+oupts scr,'  |_______|'
+oupts scr,''
+oupts scr,'You rolled a 3'
+jump done
+four:
+oupts scr,'   _______'
+oupts scr,'  |       |'
+oupts scr,'  | X   X |'
+oupts scr,'  |       |'
+oupts scr,'  | X   X |'
+oupts scr,'  |_______|'
+oupts scr,''
+oupts scr,'You rolled a 4'
+jump done
+five:
+oupts scr,'   _______'
+oupts scr,'  |       |'
+oupts scr,'  | X   X |'
+oupts scr,'  |   X   |'
+oupts scr,'  | X   X |'
+oupts scr,'  |_______|'
+oupts scr,''
+oupts scr,'You rolled a 5' 
+jump done
+six:
+oupts scr,'   _______'
+oupts scr,'  |       |'
+oupts scr,'  | X   X |'
+oupts scr,'  | X   X |'
+oupts scr,'  | X   X |'
+oupts scr,'  |_______|'
+oupts scr,''
+oupts scr,'You rolled a 6'
+
+done:
+inpti kbd,userinput
+load acc,userinput
+jgez start

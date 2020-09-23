@@ -1,0 +1,13 @@
+;Output different coloured text
+textcolour: datai 0
+clrs #0
+again:
+ouptc scr,textcolour
+oupts scr,'--Lots of different colours!--'
+load acc,textcolour
+inc acc
+copy acc,textcolour
+cmpr acc,#16
+jnez again
+
+

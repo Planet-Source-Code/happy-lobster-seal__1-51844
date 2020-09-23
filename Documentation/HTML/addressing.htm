@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Addressing</title>
+</head>
+
+<body>
+
+<p><font face="Arial" size="3"><b>Addressing</b></font></p>
+
+<p><font face="Verdana" size="2">This is a way of telling an instruction what data to use in its computation.</font></p>
+
+<p><font face="Verdana" size="2"><b>Indexed</b></font></p>
+
+<p><font face="Verdana" size="2">This is where an array name is used as an address.&nbsp;Arrays are
+1-dimensional and can be
+declared in any part of the program and must be declared.</font></p>
+<p><font face="Verdana" size="2">Declaration is done as follows:</font></p>
+<p><font face="Verdana" size="2">&lt;ArrayName&gt;: Blocki &lt;SizeOfArray&gt;</font></p>
+<p><font face="Verdana" size="2">where &lt;SizeOfArray&gt; is an integer that represents the size of the array
+including element(0).</font></p>
+<p><font face="Verdana" size="2">e.g. MyArray: Blocki 2 ;Declare an array called MyArray with 2 elements; MyArray(0) and
+MyArray(1).</font></p>
+<p><font face="Verdana" size="2">Used:</font></p>
+<p>  <font face="Verdana" size="2">&lt;Instruction&gt;&nbsp; &lt;Register&gt;, MyArray(&lt;Real>)<br>
+&lt;Instruction&gt;&nbsp; &lt;Register&gt;, MyArray(&lt;Register>)</font></p>
+<p><font face="Verdana" size="2">Where &lt;Real&gt; is a positive integer and register &lt;Register&gt; = Acc
+| Indx</font></p>
+<p><font face="Verdana" size="2">e.g. Load Acc, MyArray(2)</font></p>
+<p>&nbsp;</p>
+<p><font face="Verdana" size="2"><b>Direct Addressing</b></font></p>
+<p><font face="Verdana" size="2">This is where a variable name is used as an address.&nbsp; The variable can
+be declared in any part of the program but must be declared.</font></p>
+<p><font face="Verdana" size="2">Declaration is done as follows:</font></p>
+<p><font face="Verdana" size="2">&lt;VariableName&gt;: Datai &lt;InitialValue&gt;</font></p>
+<p><font face="Verdana" size="2">where &lt;InitialValue&gt; is the initial value of the variable.</font></p>
+<p><font face="Verdana" size="2">e.g. MyVariable: Datai 48</font></p>
+<p><font face="Verdana" size="2">Would declare a variable called MyArray with a value of 48.</font></p>
+<p><font face="Verdana" size="2">Used:</font></p>
+<p><font face="Verdana" size="2">&lt;Instruction&gt;&nbsp; &lt;Register>, MyVariable</font></p>
+<p>  <font face="Verdana" size="2">  e.g. Dvd Indx, Apples ;Divide contents of indx with contents of apples</font>
+</p>
+<p>  &nbsp;
+</p>
+<p><font face="Verdana" size="2"><b>Immediate Addreessing</b></font></p>
+<p><font face="Verdana" size="2">This is where the value to be used with an instruction is given explicitly.</font></p>
+<p><font face="Verdana" size="2">Used:</font></p>
+<p>  <font face="Verdana" size="2">  &lt;Instruction&gt;&nbsp; &lt;Register>,#&lt;Integer></font>
+</p>
+
+<p>  <font face="Verdana" size="2">  e.g. Add Indx,#23 ;Adds 23 to the index register</font>
+</p>
+
+<p>  &nbsp;
+</p>
+
+<p>  <font face="Verdana" size="2"><b>  Rnadom Function</b></font>
+</p>
+
+<p>  <font face="Verdana" size="2">  This is a special function that returns a random integer.&nbsp; It is
+similar to the way arrays are used but does not require any declaration.</font>
+</p>
+
+<p>  <font face="Verdana" size="2">  LOAD Acc,Rnd(&lt;Real>)<br>
+LOAD Acc,Rnd(&lt;Register>)</font>
+</p>
+
+<p>  <font face="Verdana" size="2">  Where &lt;Real&gt; is a positive integer and register &lt;Register&gt; = Acc
+| Indx</font>
+</p>
+
+<p>  <font face="Verdana" size="2">  e.g. Load Acc,Rnd(3) ;Load into accumulator random number between 0 and 2.</font>
+</p>
+
+</body>
+
+</html>

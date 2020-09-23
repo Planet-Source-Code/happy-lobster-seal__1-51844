@@ -1,0 +1,29 @@
+number:   datai 0
+zeros:    datai 0
+ones:     datai 0
+                              
+;program to count bits in a nnumber     
+                              
+begin:    inpti kbd,number
+          oupti scr,number
+          clrz indx
+          load acc,number
+          cmpr acc,#0
+          jgez while
+	    neg acc       
+while:    copy acc,number
+          cmpr acc,#0
+          jeqz whileend
+          mod acc,#2
+          jeqz skip
+          inc indx         
+skip:     load acc,number
+          dvd acc,#2
+          jump while
+whileend: copy indx,ones
+          load indx,#16
+          sub indx,ones
+          copy indx,zeros
+          oupti scr,zeros
+          oupti scr,ones
+end:      halt

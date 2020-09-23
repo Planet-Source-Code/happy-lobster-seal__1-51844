@@ -1,0 +1,16 @@
+\pard
+		\plain\f4\fs20\cf2 green
+		\plain\f4\fs20  
+		\plain\f4\fs20\cf1 red
+		\plain\f4\fs20  
+		\plain\f4\fs20\cf3 blue 
+		\plain\f4\fs20\cf0 black
+	\par
+		\plain\f4\fs20\cf2 green
+		\plain\f4\fs20  
+		\plain\f4\fs20\cf1 red
+		\plain\f4\fs20  
+		\plain\f4\fs20\cf3 blue 
+		\plain\f4\fs20\cf0 black
+	\par \plain\f3\fs18 
+\par }

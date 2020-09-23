@@ -1,0 +1,19 @@
+mynum: datai 0
+oupts scr,'oooooooooooooooooooooooooooooo'
+oupts scr,'o   Random Number Generator  o'
+oupts scr,'o                            o'
+oupts scr,'o Input a number to generate o'
+oupts scr,'o a random value between 0   o'
+oupts scr,'o and that number            o'
+oupts scr,'o                            o'
+oupts scr,'o      Negative to quit      o'
+oupts scr,'oooooooooooooooooooooooooooooo'
+oupts scr,''
+
+start:
+inpti kbd,mynum
+load acc,mynum
+jltz done
+oupti scr,rnd(acc)
+jump start
+done:

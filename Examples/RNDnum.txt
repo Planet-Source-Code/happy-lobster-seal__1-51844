@@ -1,0 +1,4 @@
+mynum: datai 0
+inpti kbd,mynum
+load acc,mynum
+oupti scr,rnd(acc)

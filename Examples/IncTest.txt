@@ -1,0 +1,3 @@
+myvar: datai 32767
+load acc,myvar
+inc acc

@@ -1,0 +1,13 @@
+rndnum: datai 0
+innum: datai 0
+
+load acc,rnd(3)
+copy acc,rndnum
+do:
+	inpti kbd,innum
+	load acc,innum
+	cmpr acc,rndnum
+	jeqz done
+jump do
+done:
+	oupti	scr	,	rndnum

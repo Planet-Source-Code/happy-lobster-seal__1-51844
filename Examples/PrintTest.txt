@@ -1,0 +1,3 @@
+clrs #12
+ouptc scr,#15
+oupts scr,'==Mase Is Ace=='

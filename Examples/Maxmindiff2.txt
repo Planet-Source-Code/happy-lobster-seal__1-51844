@@ -1,0 +1,41 @@
+;WHILE... LOOP...
+;
+;Do While MyVar=1
+;MyVar: Datai 0 ;Declaration of MyVar (If needed)
+;	Action
+;Loop
+Start_Wh:	Load Acc,MyVar
+		Cmpr Acc,#1
+		Jnez End_While
+			;Action goes here
+		Jump Start_Wh
+End_While:
+
+
+num1:  datai 0
+num2:  datai 0
+max:   datai 0
+min:   datai 0
+diff:  datai 0
+
+begin: inpti kbd,num1 ;add
+	 inpti kbd,num2 ;rjtrj
+compr: load acc,num1 ;load acc
+       cmpr acc,num2
+       jlez else
+then:  load acc,num1
+       copy acc,max
+       load acc,num2
+       copy acc,min
+       jump endif
+else:  load acc,num2
+       copy acc,max
+       load acc,num1
+       copy acc,min
+endif: load acc,max
+	 sub acc,min
+       copy acc,diff
+       oupti scr,max
+       oupti scr,min
+       oupti scr,diff
+end:   halt

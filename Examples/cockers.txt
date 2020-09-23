@@ -1,0 +1,64 @@
+num1: datai 0
+num2: datai 0
+result: datai 0
+choice: datai 0
+
+ouptc scr,#3
+oupts scr,'SIMPLE CALCULATOR'
+oupts scr,'Input a number'
+inpti kbd,num1
+oupts scr,'input another number'
+inpti kbd,num2
+choices:
+oupts scr,'1 add'
+oupts scr,'2 subtract'
+oupts scr,'3 divide'
+oupts scr,'4 multiply'
+oupts scr,'5 mod'
+oupts scr,'Enter your choice'
+
+inpti kbd,choice
+load acc,choice
+cmpr acc,#1
+jeqz ladd
+cmpr acc,#2
+jeqz lsubtract
+cmpr acc,#3
+jeqz ldivide
+cmpr acc,#4
+jeqz lmultiply
+cmpr acc,#5
+jeqz lmod
+
+oupts scr,'not a valid choice'
+jump choices
+
+ladd:
+load acc,num1
+add acc,num2
+jump output
+
+lsubtract:
+load acc,num1
+sub acc,num2
+jump output
+
+lmultiply:
+load acc,num1
+mpy acc,num2
+jump output
+
+ldivide:
+load acc,num1
+dvd acc,num2
+jump output
+
+lmod:
+load acc,num1
+mod acc,num2
+jump output
+
+output:
+oupts scr,'The result is'
+copy acc,result
+oupti scr,result

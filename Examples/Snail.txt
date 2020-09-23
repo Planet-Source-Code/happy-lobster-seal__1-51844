@@ -1,0 +1,104 @@
+;  ***************************************************
+;  * WELCOME TO SEAL                                 *
+;  *                                                 *
+;  * Assembly Language Simulator/Animator            *
+;  ***************************************************
+;
+; This is an example program to demonstrate some of the
+; features of the software
+;
+; * To run the code press F1
+; * To view this program executing by pressing F12 and
+;   select Animation to 'Full'
+; * To stop the program press F3
+; * Right click anywhere on the code and choose 'Explain Line'
+;   for help on what the line means
+;
+; There is some documentation in the documentation 
+; folder and example code in examples.
+;
+;  If you make any programs on this send them to me!
+;  I'd like to see what the system is capable of 
+;
+;
+;  Send your responses/bugs/etc to djhappylobster@hotmail.com
+
+Colour:  Datai 0 ;Declare variable called colour with initial value 0
+Error:   Datai 0 ;Declare variable called error with initial value 0
+
+Redo:
+Clrs #15 ;Clear screen with colour 15
+
+; This section outputs coloured text
+Ouptc Scr,#0
+Oupts Scr,'This program draws a coloured snail'
+Ouptc Scr,#8
+Oupts Scr,'    1-Grey'
+Ouptc Scr,#9
+Oupts Scr,'    2-Blue'
+Ouptc Scr,#10
+Oupts Scr,'    3-Green'
+Ouptc Scr,#11
+Oupts Scr,'    4-Cyan'
+Ouptc Scr,#12
+Oupts Scr,'    5-Red'
+Ouptc Scr,#13
+Oupts Scr,'    6-Magenta'
+Ouptc Scr,#14
+Oupts Scr,'    7-Yellow'
+
+Ouptc Scr,#0
+Oupts Scr,'Pick a colour (1-8)'
+
+; If the number input was invalid display error
+Load Acc,#1
+Cmpr Acc,Error
+Jnez Noerror
+Ouptc Scr,#12
+Oupts Scr,'The number you enter last was not valid'
+
+; Input users choice of colour
+Noerror:
+Ouptc Scr,#0
+Inpti Kbd,Colour
+
+; The the range of the input, ie 0>colour<9
+Load Acc,Colour
+Jlez Error
+Cmpr Acc,#8
+Jgez Error
+
+; Set the colour of the snail
+Load Acc,Colour
+Add Acc,#7
+Copy Acc,Colour
+Ouptc Scr,Colour
+
+; Output a snail
+Clrs #15
+oupts scr,'-----------------------------------------------'
+Oupts Scr,'          This is your lovely Snail            '
+Oupts Scr,''
+Oupts Scr,'        /^\    /^\                             '
+Oupts Scr,'       {  O}  {  O}                            '
+Oupts Scr,'        \ /    \ /                             '
+Oupts Scr,'        //     //       _------_               '
+Oupts Scr,'       //     //     ./~        ~-_            '
+Oupts Scr,'      / ~----~/     /              \           '
+Oupts Scr,'    /         :   ./       _---_    ~-         '
+Oupts Scr,'   |  \________) :       /~     ~\   |         '
+Oupts Scr,'   |        /    |      |  :~~\  |   |         '
+Oupts Scr,'   |       |     |      |  \___-~    |         '
+Oupts Scr,'   |        \ __/`\______\.        ./          '
+Oupts Scr,'    \                     ~-______-~\.         '
+Oupts Scr,'    .|                                ~-_      '
+Oupts Scr,'   /_____________________________________~~____'
+Oupts Scr,''
+oupts scr,'------------------------------------------------'
+Halt ;End program
+
+; If the numer input was invalid set error flag
+Error:
+Load Acc,#1
+Copy Acc,Error
+Jump Redo

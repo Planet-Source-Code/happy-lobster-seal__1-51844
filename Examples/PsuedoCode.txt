@@ -1,0 +1,73 @@
+toppos = top positon of line
+windowlines = number of lines in window
+currentline = number of lines till current cursor pos
+curx = current x pos
+cury = current y pos
+topline = number of lines to top
+
+>>>New line
+
+
+if cury=windowlines then
+  inc maxscroll
+  scroll.val=maxscroll  
+  ofset=scroll.val  
+  topline=ypos
+  for cury=1 to windowlines
+    clearline cury
+    printline ofset+cury
+  next
+  cury=windowlines
+else
+  inc cury
+end if    
+inc currentline
+
+
+>>resize
+
+newwindowlines=WORKOUT windowlines
+scroll.max=(currentline-newwindowlines)+1
+
+if currentline<=newwindowlines then
+  scroll.enabled=false
+else
+  scroll.enabled=true
+end if
+
+if newwindowlines>windowlines then
+  if newwindowlines>(currentline-topline)+1 then
+     scroll.value=scroll.max
+     offset=scroll.value-1
+     for cuy=1 to newwindowlines
+      clearline cury
+      printline offset+cury
+     next
+  else
+    offset=scroll.value-1
+    for cuy=windowlines+1 to newwindowlines
+      clearline cury
+      printline offset+cury
+    next
+  end if
+end if
+windowlines=newwindowslines
+
+>>scroll
+offset=scroll.value-1
+for cuy=1 to windowlines
+  clearline cury
+  printline offset+cury
+next
+
+cury=windowlines+1
+if scroll.value=max 
+  cury=windowlines
+  curx=len(currentline)
+end if
+if scroll.enabled=false then
+  cury=currentline
+  curx=len(currentline)
+end if
+
+

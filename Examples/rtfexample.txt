@@ -1,0 +1,25 @@
+{\rtf1\ansi\deff0\deftab720
+	{\fonttbl
+		{\f0\fswiss MS Sans Serif;}
+		{\f1\froman\fcharset2 Symbol;}
+		{\f2\fmodern Fixedsys;}
+		{\f3\fmodern Fixedsys;}
+	}
+	{\colortbl
+		\red0\green0\blue0;
+		\red0\green255\blue0;
+		\red0\green0\blue255;
+		\red255\green0\blue0;
+	}
+	\deflang1033
+	\pard
+		\plain\f3\fs20\cf1 green
+		\plain\f3\fs20  
+		\plain\f3\fs20\cf3 red
+		\plain\f3\fs20  
+		\plain\f3\fs20\cf2 blue 
+		\plain\f3\fs20\cf0 black
+		\plain\f3\fs20 
+	\par }
+\par }
+
